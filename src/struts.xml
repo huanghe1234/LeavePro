@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<include file="config/struts-goods.xml"></include>
+
+	<package name="default" namespace="/" extends="struts-default">
+		
+		<action name="user_*" method="{1}" class="com.tc25.action.UserAction">
+			<result name="login">/login.jsp</result>
+			<result name="studentLeave">/studentLeave.jsp</result>
+			<result name="leaveList">/leaveList.jsp</result>
+			<result name="isStudent">/studentLeave.jsp</result>
+		</action>
+		
+		<action name="leave_*" method="{1}" class="com.tc25.action.LeaveformAction">
+			<result name="welcome">/welcome.jsp</result>
+			<result name="teacherCheck">/teacherCheck.jsp</result>
+		</action>
+		
+			
+	</package>
+    
+    
+
+</struts>

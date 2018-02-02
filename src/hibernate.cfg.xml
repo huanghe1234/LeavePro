@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory >
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.username">huanghe</property>
+		<property name="hibernate.connection.password">123456</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+		<!-- 自动更新表结构 -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- 后他打印sql语句 -->
+		<property name="show_sql">true</property>
+		<mapping class="com.tc25.entity.User"/>
+		<mapping class="com.tc25.entity.Teacher"/>
+		<mapping class="com.tc25.entity.Leaveform"/>
+		<mapping class="com.tc25.entity.Job"/>
+	</session-factory>
+</hibernate-configuration>
